@@ -4,13 +4,13 @@ This repository contains the Python generation script and database schema for th
 
 ---
 
-## 📂 Repository Contents
+## Repository Contents
 * `generate_database.py` (or Jupyter Notebook): The end-to-end Python script utilizing `sqlite3`, `random`, and `numpy` to build the database, enforce constraints, inject realistic missing values/duplicates, and populate 1,200+ records.
 * `antarctic_ice_core_lab.db`: The compiled SQLite database file outputted by the generation script.
 
 ---
 
-## 🗄️ Schema Architecture
+## Schema Architecture
 The database is fully normalized in Third Normal Form (3NF) across three related tables:
 1. **`drilling_sites`** (Parent table tracking Antarctic sectors and ice sheet thickness).
 2. **`ice_cores`** (Child table connected via `site_id` Foreign Key logging extraction depths).
@@ -18,7 +18,7 @@ The database is fully normalized in Third Normal Form (3NF) across three related
 
 ---
 
-## 📊 Data Types Representation
+## Data Types Representation
 The database satisfies all rubric requirements across 12 total columns:
 * **Nominal:** `sector_code`, `strain_classification`
 * **Ordinal:** `viability_status_tier` (*Dormant* $\rightarrow$ *Stressed* $\rightarrow$ *Resilient* $\rightarrow$ *Mutated*)
@@ -27,7 +27,7 @@ The database satisfies all rubric requirements across 12 total columns:
 
 ---
 
-## 🚀 How to Run the Script
+## How to Run the Script
 
 1. Ensure you have Python installed along with the required libraries (`numpy`).
 2. Run the Python script or open the Google Colab notebook:
